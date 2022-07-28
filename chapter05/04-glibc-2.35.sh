@@ -36,7 +36,7 @@ make DESTDIR=$LFS install
 
 sed '/RTLDLIST=/s@/usr@@g' -i $LFS/usr/bin/ldd
 
-echo 'int main(){}' &gt; dummy.c
+echo 'int main(){}' > dummy.c
 $LFS_TGT-gcc dummy.c
 readelf -l a.out | grep '/ld-linux'
 
