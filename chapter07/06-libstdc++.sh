@@ -4,6 +4,9 @@ if [ "$(whoami)" != "root" ]; then
  exit 255
 fi
 #Header
+cd $LFS/sources
+tar xvf gcc-11.2.0.tar.xz
+cd gcc-11.2.0
 
 ln -s gthr-posix.h libgcc/gthr-default.h
 
@@ -22,7 +25,7 @@ make
 
 make install
 
-
-
 # Footer
-echo "Done - {0}"
+cd $LFS/sources
+rm -rf gcc-11.2.0
+echo "Done - gcc-11.2.0.tar.xz"
