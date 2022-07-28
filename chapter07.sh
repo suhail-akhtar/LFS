@@ -2,13 +2,13 @@
 
 
 
-$LFS/sources/LFS/chapter07/01-changing .sh
+$LFS/sources/LFS/chapter07/01-changing.sh
 
 $LFS/sources/LFS/chapter07/02-preparing.sh
 
 $LFS/sources/LFS/chapter07/03-entering.sh
 
-$LFS/sources/LFS/chapter07/04-creating .sh
+$LFS/sources/LFS/chapter07/04-creating.sh
 
 $LFS/sources/LFS/chapter07/05-creating.sh
 
