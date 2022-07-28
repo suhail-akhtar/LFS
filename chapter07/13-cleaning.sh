@@ -13,6 +13,9 @@ rm -rf /tools
 
 exit
 
+# Following directory must be changed the END USER
+export HOME=/home/suhailakhtar/
+
 umount $LFS/dev/pts
 umount $LFS/{sys,proc,run,dev}
 
