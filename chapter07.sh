@@ -12,7 +12,7 @@ $LFS/sources/LFS/chapter07/04-creating .sh
 
 $LFS/sources/LFS/chapter07/05-creating.sh
 
-$LFS/sources/LFS/chapter07/06-libstdc++ .sh
+$LFS/sources/LFS/chapter07/06-libstdc++.sh
 
 $LFS/sources/LFS/chapter07/07-gettext-0.21.sh
 
