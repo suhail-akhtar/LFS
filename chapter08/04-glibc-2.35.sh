@@ -12,7 +12,7 @@ patch -Np1 -i ../glibc-2.35-fhs-1.patch
 mkdir -v build
 cd       build
 
-echo "rootsbindir=/usr/sbin" &gt; configparms
+echo "rootsbindir=/usr/sbin" > configparms
 
 ../configure --prefix=/usr                            \
              --disable-werror                         \
@@ -37,7 +37,7 @@ cp -v ../nscd/nscd.conf /etc/nscd.conf
 mkdir -pv /var/cache/nscd
 
 mkdir -pv /usr/lib/locale
-localedef -i POSIX -f UTF-8 C.UTF-8 2&gt; /dev/null || true
+localedef -i POSIX -f UTF-8 C.UTF-8 2> /dev/null || true
 localedef -i cs_CZ -f UTF-8 cs_CZ.UTF-8
 localedef -i de_DE -f ISO-8859-1 de_DE
 localedef -i de_DE@euro -f ISO-8859-15 de_DE@euro
@@ -61,7 +61,7 @@ localedef -i it_IT -f ISO-8859-1 it_IT
 localedef -i it_IT -f ISO-8859-15 it_IT@euro
 localedef -i it_IT -f UTF-8 it_IT.UTF-8
 localedef -i ja_JP -f EUC-JP ja_JP
-localedef -i ja_JP -f SHIFT_JIS ja_JP.SJIS 2&gt; /dev/null || true
+localedef -i ja_JP -f SHIFT_JIS ja_JP.SJIS 2> /dev/null || true
 localedef -i ja_JP -f UTF-8 ja_JP.UTF-8
 localedef -i nl_NL@euro -f ISO-8859-15 nl_NL@euro
 localedef -i ru_RU -f KOI8-R ru_RU.KOI8-R
@@ -75,10 +75,10 @@ localedef -i zh_TW -f UTF-8 zh_TW.UTF-8
 
 make localedata/install-locales
 
-localedef -i POSIX -f UTF-8 C.UTF-8 2&gt; /dev/null || true
-localedef -i ja_JP -f SHIFT_JIS ja_JP.SJIS 2&gt; /dev/null || true
+localedef -i POSIX -f UTF-8 C.UTF-8 2> /dev/null || true
+localedef -i ja_JP -f SHIFT_JIS ja_JP.SJIS 2> /dev/null || true
 
-cat &gt; /etc/nsswitch.conf &lt;&lt; "EOF"
+cat > /etc/nsswitch.conf << "EOF"
 # Begin /etc/nsswitch.conf
 
 passwd: files
@@ -114,16 +114,16 @@ unset ZONEINFO
 
 tzselect
 
-ln -sfv /usr/share/zoneinfo/&lt;xxx&gt; /etc/localtime
+ln -sfv /usr/share/zoneinfo/<xxx> /etc/localtime
 
-cat &gt; /etc/ld.so.conf &lt;&lt; "EOF"
+cat > /etc/ld.so.conf << "EOF"
 # Begin /etc/ld.so.conf
 /usr/local/lib
 /opt/lib
 
 EOF
 
-cat &gt;&gt; /etc/ld.so.conf &lt;&lt; "EOF"
+cat >> /etc/ld.so.conf << "EOF"
 # Add an include directory
 include /etc/ld.so.conf.d/*.conf
 
