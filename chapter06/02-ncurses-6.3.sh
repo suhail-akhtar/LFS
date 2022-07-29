@@ -31,7 +31,7 @@ popd
 make -j4
 
 make DESTDIR=$LFS TIC_PATH=$(pwd)/build/progs/tic install
-echo "INPUT(-lncursesw)" &gt; $LFS/usr/lib/libncurses.so
+echo "INPUT(-lncursesw)" > $LFS/usr/lib/libncurses.so
 
 
 # Footer
