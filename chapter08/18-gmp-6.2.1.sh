@@ -20,7 +20,7 @@ cp -v configfsf.sub   config.sub
 make
 make html
 
-make check 2&gt;&amp;1 | tee gmp-check-log
+make check 2>&1 | tee gmp-check-log
 
 awk '/# PASS:/{total+=$3} ; END{print total}' gmp-check-log
 
