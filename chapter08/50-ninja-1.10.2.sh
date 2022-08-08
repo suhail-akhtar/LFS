@@ -11,7 +11,7 @@ sed -i '/int Guess/a \
   int   j = 0;\
   char* jobs = getenv( "NINJAJOBS" );\
   if ( jobs != NULL ) j = atoi( jobs );\
-  if ( j &gt; 0 ) return j;\
+  if ( j > 0 ) return j;\
 ' src/ninja.cc
 
 python3 configure.py --bootstrap
