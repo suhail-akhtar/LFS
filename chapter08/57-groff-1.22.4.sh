@@ -7,7 +7,7 @@ fi
 cd $LFS/sources
 tar xvf groff-1.22.4.tar.gz
 cd groff-1.22.4
-PAGE=&lt;paper_size&gt; ./configure --prefix=/usr
+PAGE=A4 ./configure --prefix=/usr
 
 make -j1
 
