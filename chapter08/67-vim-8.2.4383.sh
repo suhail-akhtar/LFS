@@ -7,7 +7,7 @@ fi
 cd $LFS/sources
 tar xvf vim-8.2.4383.tar.gz
 cd vim-8.2.4383
-echo '#define SYS_VIMRC_FILE "/etc/vimrc"' &gt;&gt; src/feature.h
+echo '#define SYS_VIMRC_FILE "/etc/vimrc"' >> src/feature.h
 
 ./configure --prefix=/usr
 
@@ -15,7 +15,7 @@ make
 
 chown -Rv tester .
 
-su tester -c "LANG=en_US.UTF-8 make -j1 test" &amp;&gt; vim-test.log
+su tester -c "LANG=en_US.UTF-8 make -j1 test" &> vim-test.log
 
 make install
 
@@ -26,7 +26,7 @@ done
 
 ln -sv ../vim/vim82/doc /usr/share/doc/vim-8.2.4383
 
-cat &gt; /etc/vimrc &lt;&lt; "EOF"
+cat > /etc/vimrc << "EOF"
 " Begin /etc/vimrc
 
 " Ensure defaults are set before customizing settings, not after
@@ -37,7 +37,7 @@ set nocompatible
 set backspace=2
 set mouse=
 syntax on
-if (&amp;term == "xterm") || (&amp;term == "putty")
+if (&term == "xterm") || (&term == "putty")
   set background=dark
 endif
 
