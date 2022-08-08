@@ -20,7 +20,7 @@ make
 
 make NON_ROOT_USERNAME=tester check-root
 
-echo "dummy:x:102:tester" &gt;&gt; /etc/group
+echo "dummy:x:102:tester" >> /etc/group
 
 chown -Rv tester . 
 
