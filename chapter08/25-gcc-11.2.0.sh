@@ -48,8 +48,8 @@ ln -svr /usr/bin/cpp /usr/lib
 ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/11.2.0/liblto_plugin.so \
         /usr/lib/bfd-plugins/
 
-echo 'int main(){}' &gt; dummy.c
-cc dummy.c -v -Wl,--verbose &amp;&gt; dummy.log
+echo 'int main(){}' > dummy.c
+cc dummy.c -v -Wl,--verbose &> dummy.log
 readelf -l a.out | grep ': /lib'
 
 grep -o '/usr/lib.*/crt[1in].*succeeded' dummy.log
