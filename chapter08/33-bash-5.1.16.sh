@@ -16,7 +16,7 @@ make
 
 chown -Rv tester .
 
-su -s /usr/bin/expect tester &lt;&lt; EOF
+su -s /usr/bin/expect tester << EOF
 set timeout -1
 spawn make tests
 expect eof
