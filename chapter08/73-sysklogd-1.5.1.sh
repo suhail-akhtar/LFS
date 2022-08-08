@@ -14,7 +14,7 @@ make
 
 make BINDIR=/sbin install
 
-cat &gt; /etc/syslog.conf &lt;&lt; "EOF"
+cat > /etc/syslog.conf << "EOF"
 # Begin /etc/syslog.conf
 
 auth,authpriv.* -/var/log/auth.log
