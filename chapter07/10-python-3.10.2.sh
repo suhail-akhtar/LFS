@@ -5,8 +5,8 @@ if [ "$(whoami)" != "root" ]; then
 fi
 #Header
 cd $LFS/sources
-tar xvf python-3.10.2-docs-html.tar.bz2
-cd python-3.10.2-docs-html
+tar xvf Python-3.10.2.tar.xz
+cd Python-3.10.2
 ./configure --prefix=/usr   \
             --enable-shared \
             --without-ensurepip
@@ -18,5 +18,5 @@ make install
 
 # Footer
 cd $LFS/sources
-rm -rf python-3.10.2-docs-html
-echo "Done - python-3.10.2-docs-html.tar.bz2"
+rm -rf Python-3.10.2
+echo "Done - Python-3.10.2.tar.xz"
