@@ -20,7 +20,7 @@ patch -Np1 -i ../glibc-2.35-fhs-1.patch
 mkdir -v build
 cd       build
 
-echo "rootsbindir=/usr/sbin" &gt; configparms
+echo "rootsbindir=/usr/sbin" > configparms
 
 ../configure                             \
       --prefix=/usr                      \
